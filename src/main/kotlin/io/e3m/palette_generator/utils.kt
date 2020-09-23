@@ -1,5 +1,6 @@
 package io.e3m.palette_generator
 
+import io.e3m.palette_generator.easings.EasingFnType
 import org.hsluv.HUSLColorConverter
 import kotlin.math.absoluteValue
 

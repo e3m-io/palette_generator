@@ -1,11 +1,14 @@
 package io.e3m.palette_generator
 
+import io.e3m.palette_generator.easings.EasingFnType
+import io.e3m.palette_generator.easings.easeLinear
+
 typealias Shades = List<Pair<String, Double>>
 typealias Palette = List<Pair<String, String>>
 
 const val LIGHTNESS_RANGE = 100;
 
-class PaletteGenerator(referenceColor: String, val shades: Shades, val hueShift: Double = 0.0, val hueEasingFn: EasingFnType = ::easeLinear, includeOriginalColor: Boolean = true) {
+class PaletteGenerator(referenceColor: String, private val shades: Shades, private val hueShift: Double = 0.0, private val hueEasingFn: EasingFnType = ::easeLinear, includeOriginalColor: Boolean = true) {
     private val referenceHue: Double;
     private val referenceSaturation: Double;
     private val referenceLightness: Double;
